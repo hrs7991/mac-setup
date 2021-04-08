@@ -28,14 +28,29 @@ ssh-add -K ~/.ssh/id_ed25519
 ```
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
+5. Add it on [GitHub](https://github.com/settings/keys)
 
 ## VSCode Setup
 
 - shell command
 
-## OhMyZsh Setup
+## Other Tools
 
-Theme `xiong-chiamiov-plus`
+Terminal Notifier
+```
+brew install terminal-notifier
+```
+
+### OhMyZsh 
+
+Themes
+- fino-time
+- agnoster
 
 Plugins
-- 
+- git
+- docker
+- fzf
+- kubectl
+- go
+- python
