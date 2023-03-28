@@ -1,0 +1,49 @@
+export PATH=$HOME/go/bin:$PATH
+export GOPATH=$HOME/go
+export GOPRIVATE=github.com/carousell/*
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:/Users/harshitshah/work/code/go/user-aux/tools"
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+export ZSH="/Users/harshitshah/.oh-my-zsh"
+
+ZSH_THEME="fino-time"
+
+plugins=(git docker fzf kubectl golang python)
+
+eval "$(ssh-agent -s)"
+ssh-add -K ~/.ssh/id_ed25519
+
+alias deti="docker exec -it"
+
+alias cdsp="cd ~/work/code/shared-proto"
+alias cdcs="cd ~/work/code/carousell-config-stage"
+alias cdcc="cd ~/work/code/carousell-config"
+
+alias cddj="cd ~/work/code/python/Carousell-Django"
+alias cdfs="cd ~/work/code/python/FieldSetGenerator"
+alias cdde="cd ~/work/code/python/data-etl"
+
+alias cdli="cd ~/work/code/go/listing"
+alias cdof="cd ~/work/code/go/offer"
+alias cdxc="cd ~/work/code/go/XcaroV2"
+alias cdsf="cd ~/work/code/go/smart-fields"
+alias cddg="cd ~/work/code/go/djgateway"
+alias cdgw="cd ~/work/code/go/api-gateway"
+alias cdtr="cd ~/work/code/go/Translation"
+alias cdno="cd ~/work/code/go/notification"
+alias cdgo="cd ~/go/src/github.com/carousell/Carousell-Go"
+
+alias kmain="gcloud container clusters get-credentials main-k122 --region asia-east1 --project thecarousell.com:api-project-11554775814"
+alias kdata="gcloud container clusters get-credentials data-k118 --region asia-east1 --project thecarousell.com:api-project-11554775814"
+alias kmsg="gcloud container clusters get-credentials messaging-k122 --region asia-east1 --project thecarousell.com:api-project-11554775814"
+alias kfeat="gcloud container clusters get-credentials staging-feature-k122 --zone asia-east1-c --project carousell-staging"
+alias kmainstage="gcloud container clusters get-credentials staging-main-k122 --zone asia-east1-c --project carousell-staging"
+alias kmsgstage="gcloud container clusters get-credentials staging-messaging-k122 --zone asia-east1-c --project carousell-staging"
+alias kqa="gcloud container clusters get-credentials qa-1 --zone asia-east1-c --project carousell-staging"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/harshitshah/work/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/harshitshah/work/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/harshitshah/work/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/harshitshah/work/google-cloud-sdk/completion.zsh.inc'; fi
